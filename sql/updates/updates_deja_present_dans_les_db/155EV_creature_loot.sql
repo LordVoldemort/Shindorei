@@ -1,0 +1,43 @@
+UPDATE `creature_template` SET `lootid` = 28859 WHERE `entry` = 28859;
+UPDATE `creature_template` SET `lootid` = 31734 WHERE `entry` = 31734;
+
+DELETE FROM gameobject WHERE id in (193960,193967,194158);
+
+REPLACE INTO `creature_loot_template`  VALUES (31734, 40194, 0, 1, 3, 1, 1, 0, 0, 0);
+REPLACE INTO `creature_loot_template`  VALUES (31734, 40474, 0, 1, 4, 1, 1, 0, 0, 0);
+REPLACE INTO `creature_loot_template`  VALUES (31734, 40526, 0, 1, 4, 1, 1, 0, 0, 0);
+REPLACE INTO `creature_loot_template`  VALUES (31734, 40531, 0, 1, 4, 1, 1, 0, 0, 0);
+REPLACE INTO `creature_loot_template`  VALUES (31734, 40532, 0, 1, 3, 1, 1, 0, 0, 0);
+REPLACE INTO `creature_loot_template`  VALUES (31734, 40539, 0, 1, 4, 1, 1, 0, 0, 0);
+REPLACE INTO `creature_loot_template`  VALUES (31734, 40541, 0, 1, 3, 1, 1, 0, 0, 0);
+REPLACE INTO `creature_loot_template`  VALUES (31734, 40543, 0, 1, 2, 1, 1, 0, 0, 0);
+REPLACE INTO `creature_loot_template`  VALUES (31734, 40549, 0, 1, 4, 1, 1, 0, 0, 0);
+REPLACE INTO `creature_loot_template`  VALUES (31734, 40555, 0, 1, 2, 1, 1, 0, 0, 0);
+REPLACE INTO `creature_loot_template`  VALUES (31734, 40558, 0, 1, 4, 1, 1, 0, 0, 0);
+REPLACE INTO `creature_loot_template`  VALUES (31734, 40560, 0, 1, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `creature_loot_template`  VALUES (31734, 40561, 0, 1, 2, 1, 1, 0, 0, 0);
+REPLACE INTO `creature_loot_template`  VALUES (31734, 40562, 0, 1, 3, 1, 1, 0, 0, 0);
+REPLACE INTO `creature_loot_template`  VALUES (31734, 40564, 0, 1, 3, 1, 1, 0, 0, 0);
+REPLACE INTO `creature_loot_template`  VALUES (31734, 40566, 0, 1, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `creature_loot_template`  VALUES (31734, 40588, 0, 1, 2, 1, 1, 0, 0, 0);
+REPLACE INTO `creature_loot_template`  VALUES (31734, 40589, 0, 1, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `creature_loot_template`  VALUES (31734, 40590, 0, 1, 2, 1, 1, 0, 0, 0);
+REPLACE INTO `creature_loot_template`  VALUES (31734, 40591, 0, 1, 3, 1, 1, 0, 0, 0);
+REPLACE INTO `creature_loot_template`  VALUES (31734, 40592, 0, 1, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `creature_loot_template`  VALUES (31734, 40594, 0, 1, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `creature_loot_template`  VALUES (31734, 43952, 1, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `creature_loot_template`  VALUES (31734, 44651, -100, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `creature_loot_template`  VALUES (31734, 45624, 100, 1, 0, 2, 2, 0, 0, 0);
+
+REPLACE INTO `creature_loot_template` VALUES (28859, 40474, 0, 1, 2, 1, 1, 0, 0, 0);
+REPLACE INTO `creature_loot_template` VALUES (28859, 40475, 0, 1, 2, 1, 1, 0, 0, 0);
+REPLACE INTO `creature_loot_template` VALUES (28859, 40486, 0, 1, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `creature_loot_template` VALUES (28859, 40488, 0, 1, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `creature_loot_template` VALUES (28859, 40489, 0, 1, 2, 1, 1, 0, 0, 0);
+REPLACE INTO `creature_loot_template` VALUES (28859, 40491, 0, 1, 2, 1, 1, 0, 0, 0);
+REPLACE INTO `creature_loot_template` VALUES (28859, 40497, 0, 1, 2, 1, 1, 0, 0, 0);
+REPLACE INTO `creature_loot_template` VALUES (28859, 40511, 0, 1, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `creature_loot_template` VALUES (28859, 40519, 0, 1, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `creature_loot_template` VALUES (28859, 40526, 0, 1, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `creature_loot_template` VALUES (28859, 43953, 1, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `creature_loot_template` VALUES (28859, 45624, 100, 1, 0, 2, 2, 0, 0, 0);  

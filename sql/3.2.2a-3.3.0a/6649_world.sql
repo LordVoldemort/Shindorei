@@ -1,0 +1,20 @@
+UPDATE spell_proc_event SET SpellFamilyMask0 = 0x04000000, SpellFamilyMask1 = 0x10000000 WHERE entry IN (49208, 56834, 56835);
+UPDATE `creature_template` SET `mindmg` = '97', `maxdmg` = '195', `attackpower` = '35', `minrangedmg` = '72', `maxrangedmg` = '157' WHERE `entry` = 28017;
+UPDATE spell_proc_event SET SchoolMask = 4, spellFamilyMask1 = 200776, spellFamilyMask0 = 146800663 WHERE entry = 11129;
+-- Trial of the Champion
+UPDATE instance_template SET script='instance_trial_of_the_champion' WHERE map=650;
+UPDATE creature_template SET npcflag=1, scriptname='npc_toc5_announcer' WHERE entry IN (35004, 35005);
+UPDATE creature_template SET scriptname='mob_toc5_warrior' WHERE entry IN (34705, 35572);
+UPDATE creature_template SET scriptname='mob_toc5_mage' WHERE entry IN (34702, 35569);
+UPDATE creature_template SET scriptname='mob_toc5_shaman' WHERE entry IN (34701, 35571);
+UPDATE creature_template SET scriptname='mob_toc5_hunter' WHERE entry IN (34657, 35570);
+UPDATE creature_template SET scriptname='mob_toc5_rogue' WHERE entry IN (34703, 35617);
+UPDATE creature_template SET scriptname='boss_eadric' WHERE entry=35119;
+UPDATE creature_template SET scriptname='boss_paletress' WHERE entry=34928;
+UPDATE creature_template SET scriptname='mob_toc5_memory' WHERE entry IN (35052, 35041, 35033, 35046, 35043, 35047, 35044, 35039, 35034, 35049, 35030, 34942, 35050, 35042, 35045, 35037, 35031, 35038, 35029, 35048, 35032, 35028, 35040, 35036, 35051);
+UPDATE creature_template SET scriptname='mob_toc5_risen_ghoul' WHERE entry IN (35545, 35564);
+UPDATE creature_template SET scriptname='boss_black_knight' WHERE entry=35451;
+UPDATE `creature_template` SET `ScriptName`='npc_risen_ghoul' WHERE `entry` IN (35545, 35564);
+UPDATE `creature_template` SET `ScriptName`='boss_eadric' WHERE `entry`=35119;
+UPDATE `creature_template` SET `ScriptName`='boss_paletress' WHERE `entry`=34928;
+UPDATE `creature_template` SET `ScriptName`='npc_memory' WHERE `entry` IN (35052,35041,35033,35046,35043,35047,35044,35039, 35034, 35049, 35030, 34942, 35050, 35042, 35045, 35037, 35031, 35038, 35029,35048,35032,35028,35040,35036,35051);

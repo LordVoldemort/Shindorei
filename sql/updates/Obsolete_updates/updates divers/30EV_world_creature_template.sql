@@ -1,0 +1,1 @@
+UPDATE `creature_template` SET `ScriptName` = 'mob_seaforium_depth_charge' WHERE `entry` =25401;

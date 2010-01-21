@@ -1,0 +1,1 @@
+En attendant les updates db 3.3.0. La création d'un bug tracker sur le site d'un des deux serveurs serait idéal pour m'aider à débug et savoir ce qu'il faut exactement débug. Merci.

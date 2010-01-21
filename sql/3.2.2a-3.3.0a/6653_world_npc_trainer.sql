@@ -1,0 +1,1 @@
+DELETE FROM `npc_trainer` WHERE `spell` IN (6783,9913,1785,1786,1787);

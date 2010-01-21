@@ -1,0 +1,1 @@
+UPDATE `creature_template` SET `mindmg` = `mindmg`/2, `maxdmg` = `maxdmg`/2 WHERE `entry` = 24207;
