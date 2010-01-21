@@ -498,7 +498,7 @@ void Spell::SpellDamageSchoolDmg(uint32 effect_idx)
                     {
                         uint32 pdamage = aura->GetAmount() > 0 ? aura->GetAmount() : 0;
                         pdamage = m_caster->SpellDamageBonus(unitTarget, aura->GetSpellProto(), pdamage, DOT, aura->GetParentAura()->GetStackAmount());
-                        damage += pdamage * 7; // 4 ticks of 3 seconds = 12 secs
+                        damage += pdamage * 6; // 4 ticks of 3 seconds = 12 secs
                         apply_direct_bonus = false;
                         // Glyph of Conflagrate
                         if (!m_caster->HasAura(56235))
