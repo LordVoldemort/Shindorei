@@ -471,8 +471,8 @@ void Spell::SpellDamageSchoolDmg(uint32 effect_idx)
                 // Conflagrate - consumes Immolate or Shadowflame
                 else if (m_spellInfo->TargetAuraState == AURA_STATE_CONFLAGRATE)
                 {
-                    AuraEffect const* aura = NULL; // found req. aura for damage calculation
- 
+                    AuraEffect const* aura = NULL;                // found req. aura for damage calculation
+
                     Unit::AuraEffectList const &mPeriodic = unitTarget->GetAurasByType(SPELL_AURA_PERIODIC_DAMAGE);
                     for (Unit::AuraEffectList::const_iterator i = mPeriodic.begin(); i != mPeriodic.end(); ++i)
                     {
@@ -480,25 +480,28 @@ void Spell::SpellDamageSchoolDmg(uint32 effect_idx)
                         if ((*i)->GetSpellProto()->SpellFamilyName != SPELLFAMILY_WARLOCK ||
                             (*i)->GetCasterGUID() != m_caster->GetGUID())
                             continue;
- 
+
                         // Immolate
                         if ((*i)->GetSpellProto()->SpellFamilyFlags[0] & 0x4)
                         {
-                            aura = *i; // it selected always if exist
+                            aura = *i;                      // it selected always if exist
                             break;
                         }
- 
+
                         // Shadowflame
                         if ((*i)->GetSpellProto()->SpellFamilyFlags[2] & 0x00000002)
-                            aura = *i; // remember but wait possible Immolate as primary priority
+                            aura = *i;                      // remember but wait possible Immolate as primary priority
                     }
- 
+
                     // found Immolate or Shadowflame
                     if (aura)
                     {
                         uint32 pdamage = aura->GetAmount() > 0 ? aura->GetAmount() : 0;
                         pdamage = m_caster->SpellDamageBonus(unitTarget, aura->GetSpellProto(), pdamage, DOT, aura->GetParentAura()->GetStackAmount());
-                        damage += pdamage * 4; // 4 ticks of 3 seconds = 12 secs
+                        if (aura->GetSpellProto()->SpellFamilyFlags[0] & 0x4) // Immolate
+                            damage += pdamage * 3; // 9 secs
+                        else if (aura->GetSpellProto()->SpellFamilyFlags[2] & 0x00000002) // Shadowflame
+                            damage += pdamage * 4; // 8 secs
                         apply_direct_bonus = false;
                         // Glyph of Conflagrate
                         if (!m_caster->HasAura(56235))
