@@ -2376,6 +2376,13 @@ void Spell::EffectTriggerSpell(uint32 effIndex)
                 pet->CastSpell(pet, 28305, true);
             return;
         }
+        // Integration de la fonction heal par les pets chaman, patch by Atlas ( a tester )
+        case 58879:
+        {
+            if (Unit *pet = unitTarget->GetGuardianPet())
+                pet->CastSpell(pet, 58877, true);
+            return;	
+        }			
     }
 
     // normal case
